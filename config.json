@@ -1,0 +1,28 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://root:@localhost/ankanderia",
+    "prod_uri":"mysql://root:@localhost/ankanderia",
+    "fb_url":"https://facebook.com/ankan_deria",
+    "tw_url":"https://twitter.com/ankan_deria",
+    "gh_url": "https://github.com/ankan_deria",
+    "insta_url": "https://instagram.com/ankanderia",
+    "blog_name": "Ankan Deria",
+    "copyright": "ankan_deria 2022",
+    "tag_line": "Heaven for programmers",
+    "gmail-user":"ankanderia6@gmail.com",
+    "gmail-password":"Password@123",
+    "about_text": "Hi my name is Ankan Deria and I love programming ",
+    "no_of_posts": 3,
+    "login_image":"login.svg",
+    "admin_user":"ankanderia",
+    "admin_password": "Password@123",
+    "upload_location":"C:\\Users\\hp\\Desktop\\ANKAN_ LANGUAGE\\HOME\\Flask Project\\ankanderia.com\\static\\img"
+    
+  },
+  "script":{
+    "start": "main.py"
+  }
+
+}

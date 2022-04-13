@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cartoonify</title>
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/cartoonify.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.rawgit.com/shabuninil/fileup/master/src/fileup.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>Image Cartoonify</header>
+        <form method="POST" action="{{url_for('cartoonify_img') }}" enctype="multipart/form-data" >
+            <div id="select-area">
+                <input type="file" class="file-input" name="file" hidden required> 
+                <!-- hidden --> 
+                <!-- <i class="far fa-file-image"></i> -->
+                <i class="fa fa-file-photo-o" style="font-size:36px"></i>
+                <p>Select Image</p>
+            </div>
+            {% if mimetype %}
+            <script>
+                alert("mimetype Not Match {{mimetype}}");
+            </script>
+            {% endif %}
+            <div class="preview" id="preview">
+                <img id="file-preview">
+                <!-- <i class="fas fa-trash" id="remove-img"></i> -->
+                <i class="fa fa-trash-o" style="font-size:36px" id="remove-img"></i>
+            </div>
+            {% if filename %}
+                <a href="{{filename}}" download class="btn-convert" id="download-btn">Download</a>
+                <a href="{{url_for('cartoonify_img') }}" class="btn-convert" id="reset">Reset</a>
+                <script>
+                    preview = document.getElementById("file-preview");
+                    preview.src = "{{filename}}";
+                    document.getElementById("select-area").style.display = "none";
+                    Download_btn = document.getElementById("download_btn");
+                    Download_btn.style.outline = "none";
+                </script>
+            {% else %}
+                <input type="submit" id="validate" class="btn-convert" value="Convert To Cartoon">
+            {% endif %}
+        </form>
+    </div>
+</body>
+
+<script src="{{ url_for('static', filename= 'js/cartoonify.js') }}"></script>
+</html>

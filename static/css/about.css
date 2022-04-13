@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.about-section{
+    padding: 4%;
+    background-color: #e6ffe1;;
+}
+
+.starting{
+    display: block;
+    text-align: center;
+    background-color: #ff5252;
+    font-size: 1.5rem;
+    box-shadow: 2px 5px #ff0000;
+    border-radius: 5px;
+}
+.address{
+    display: block;
+    text-align: center;
+    background-color: #fffbc5;
+    box-shadow: 2px 5px #fff481;
+    border-radius: 6px;
+}
+.education{
+    background-color: #ceeaff;
+    box-shadow: 2px 5px #93d1ff;
+    padding: 1%;
+    border-radius: 5px;
+}
+.education p{
+    background-color: #fbd7fc;
+    margin-bottom: 1%;
+    border-radius: 5px;
+}
+
+summary {
+    font-size: 2rem;
+}
+
+.education table{
+    background-color: #fbd7fc;
+    margin: 1% 5% 5% 5%;
+    width: 90%;
+    border-radius: 5px;
+}
+.start-code{
+    display: block;
+    text-align: center;
+    background-color: #ffe0ea;
+    box-shadow: 2px 5px #ff75a3;
+    border-radius: 5px;
+}
+.hobby{
+    display: block;
+    text-align: center;
+    background-color: #ffe0ea;
+    box-shadow: 2px 5px #ff75a3;
+    border-radius: 5px;
+}
+.others-ankan{
+    display: block;
+    text-align: center;
+    background-color: #c6fffc;
+    box-shadow: 2px 5px 7px 7px #91fff9;
+    border-radius: 5px;
+}
+
+.grid-containerr {
+    margin-top: 4%;
+    display: grid;
+    row-gap: 1%;
+    column-gap: 4%;
+    text-align: center;
+    background-color: #ffd0d0;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(439px, 1fr));
+    padding: 1%;
+    box-shadow: 3px 5px #ffbdbd;
+    border-radius: 5px;
+}
+
+.grid-containerr .item-1{
+    padding: 1%;
+}
+.grid-containerr .item-2{
+    padding: 1%;
+}
+
+@media only screen and (max-width: 680px) {
+    .grid-containerr {
+        grid-template-columns: 1fr;
+    }
+  }

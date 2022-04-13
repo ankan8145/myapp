@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block body %}
+<style>
+  img {
+    vertical-align: middle;
+    border: 2px solid #2ff1ff;
+    /* height: 10%; */
+    width: 12%;
+    border-radius: 50%;
+  }
+  @media only screen and (max-width: 600px) {
+    img {
+    width: 86px;
+  }
+    
+  }
+
+</style>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <img src="../static/img/myimg.jpg" alt="logo">
+              <h1>My Projects</h1>
+              <!-- <span class="subheading">{{params['tag_line']}}</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+          <div class="post-preview">
+            <h2 class="post-title">Image Cartoonify</h2>
+            <a href="cartoonify" target="_blank">click</a>
+            <p class="post-meta">Posted by Admin on 2022-01-29 09:28:44 </p>
+            <p>This project is made for cartoonify your uploaded image. You can upload one image and it will canvert it into cartoon. Your can also dowload that image.</p>
+          </div>
+
+          <div class="post-preview">
+            <h2 class="post-title">JPG to PNG Convator</h2>
+            <a href="JPG_PNG" target="_blank">click</a>
+            <p class="post-meta">Posted by Admin on 2022-01-29 09:28:44 </p>
+            <p>This project is made for convert JPG image to PNG image.</p>
+          </div>
+
+
+          <!-- Pager -->
+          <!-- <div class="clearfix">
+          
+          	
+          	<a class="btn btn-primary float-left" href="{{prev}}"> &larr;Previous</a>
+            <a class="btn btn-primary float-right" href="{{next}}">Next &rarr;</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    {% endblock %}

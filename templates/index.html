@@ -1,0 +1,71 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<style>
+  img {
+    vertical-align: middle;
+    border: 2px solid #2ff1ff;
+    /* height: 10%; */
+    width: 12%;
+    border-radius: 50%;
+  }
+  @media only screen and (max-width: 600px) {
+    img {
+    width: 86px;
+  }
+    
+  }
+
+</style>
+<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+            <div class="site-heading">
+              <img src="../static/img/myimg.jpg" alt="logo">
+              <h1>{{params['blog_name']}}</h1>
+              <span class="subheading">{{params['tag_line']}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+  <!-- Main Content -->
+  <div class="containerr">
+
+    <div class="welcome">
+      <p class="ad">Welcome to my website</p>
+    </div>
+    <div class="summary">
+      <p>Here you can read coding relatated QNA in Blog Section. You can check my few projects </p>
+    </div>
+      <div class="advice">
+        <div class="item" id="item-1"> - Keep Learning, <br> Keep Exploring, <br> Keep Updating Yourself in Every Moment </div>
+        <div class="item" id="item-2"> -Never Give Up, <br> Keep Trying</div>
+        <div class="item" id="item-3"> -Dreams Don't Work, <br> Unless You Do</div>
+        <div class="item" id="item-4"> -Success Doesn't Come To You, <br> You Go To It</div>
+      </div>
+    <div class="quotation">
+      <div class="quotation-1">
+        <div class="p-4 md:w-1/2 w-full"><div class="h-full bg-gray-100 p-8 rounded"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036" style="font-size: 17px;height: 17px;"><path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" ></path></svg><p class="leading-relaxed mb-6" ;">Code Never Lies,<br> Comments Sometimes Do </p><span class="inline-flex items-center"><span class="flex-grow flex flex-col pl-4"><span class="title-font font-medium text-gray-900" >  &#8767; Ron Jeffries</span><span class="text-gray-500 text-sm"></span></span></span></div></div>
+      </div>
+      <div class="quotation-2">
+        <div class="p-4 md:w-1/2 w-full"><div class="h-full bg-gray-100 p-8 rounded"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036" style="font-size: 17px;height: 17px;"><path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" ></path></svg><p class="leading-relaxed mb-6" ;">Talk Is Cheap,<br> show Me The Code </p><span class="inline-flex items-center"><span class="flex-grow flex flex-col pl-4"><span class="title-font font-medium text-gray-900" >  &#8767; Linus Torvalds</span><span class="text-gray-500 text-sm"></span></span></span></div></div>
+      </div>     
+      <div class="quotation-3">
+        <div class="p-4 md:w-1/2 w-full"><div class="h-full bg-gray-100 p-8 rounded"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036" style="font-size: 17px;height: 17px;"><path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" ></path></svg><p class="leading-relaxed mb-6" ;">Everybody should learn to program a computer, <br> because it teaches you how to think</p><span class="inline-flex items-center"><span class="flex-grow flex flex-col pl-4"><span class="title-font font-medium text-gray-900" >  &#8767; Steve Jobs</span><span class="text-gray-500 text-sm"></span></span></span></div></div>
+      </div>     
+      <div class="quotation-3">
+        <div class="p-4 md:w-1/2 w-full"><div class="h-full bg-gray-100 p-8 rounded"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036" style="font-size: 17px;height: 17px;"><path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" ></path></svg><p class="leading-relaxed mb-6" ;">Great Things Never Came From Comfort Zones </p><span class="inline-flex items-center"><span class="flex-grow flex flex-col pl-4"><span class="title-font font-medium text-gray-900" >  &#8767; Someone</span><span class="text-gray-500 text-sm"></span></span></span></div></div>
+      </div>     
+          
+
+    </div>
+  </div>
+  {% endblock %}
+ 

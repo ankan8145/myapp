@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(202, 50, 131);
+
+}
+::selection{
+    color: #fff;
+    background-color: #9562b6;
+}
+
+.container{
+    width: 430px;
+    background-color: rgb(243, 193, 193);
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+}
+
+.container header{
+    color: #603280;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container #select-area{
+    height: 167px;
+    display: flex;
+    cursor: pointer;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed rgb(202, 50, 131);
+}
+
+#select-area :where(i, p){
+    color: #9562b6;
+    font-weight: bold;
+}
+#select-area i{
+    font-size: 50px;
+}
+#select-area p{
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.btn-convert{
+    padding: 10px 25px;
+    margin-left: 28%;
+    margin-top: 10%;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: #603280;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.preview{
+    margin-top: 5%;
+    text-align: center;
+}
+#file-preview{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+#remove-img{
+    color: #603280;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+#download-btn{
+    text-decoration: none;
+    margin-top: 11%;
+    display: block;
+    width: 30%;
+    margin-left: 8%;
+}
+
+#reset{
+    text-decoration: none;
+    display: block;
+    margin-left: 60%;
+    margin-top: -10%;
+    width: 30%;
+    text-align: center;
+}
